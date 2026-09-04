@@ -1,0 +1,679 @@
+
+/* =========================================================
+   AI JOB READINESS ANALYZER
+   Clean White Theme + Smooth Button Animation
+   Same dashboard layout/classes
+   ========================================================= */
+
+:root {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-soft: #fafbfc;
+    --text: #1f2937;
+    --muted: #667085;
+
+    --purple: #5b5bd6;
+    --purple-hover: #4f4fc4;
+    --purple-soft: #f1f1ff;
+
+    --green: #1f9d68;
+    --orange: #c98300;
+    --red: #d64d4d;
+
+    --border: #e2e5ea;
+    --border-strong: #cfd4dc;
+
+    --shadow: 0 4px 14px rgba(16, 24, 40, 0.06);
+    --shadow-hover: 0 8px 22px rgba(16, 24, 40, 0.09);
+}
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+html,
+body,
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"],
+[data-testid="stMainBlockContainer"] {
+    background: #ffffff !important;
+    color: var(--text) !important;
+}
+
+[data-testid="stHeader"] {
+    background: #ffffff !important;
+}
+
+.main .block-container {
+    max-width: 1450px;
+    padding-top: 1.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text) !important;
+}
+
+p {
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.brand-subtitle,
+.card-text,
+.metric-desc,
+.circle-label,
+.skill-values,
+.action-text,
+.side-note,
+.footer {
+    color: var(--muted) !important;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+section[data-testid="stSidebar"] {
+    background: #ffffff !important;
+    border-right: 1px solid var(--border) !important;
+}
+
+section[data-testid="stSidebar"] > div {
+    padding-top: 1.25rem;
+}
+
+section[data-testid="stSidebar"] label {
+    color: #536174 !important;
+}
+
+/* OpenRouter success message */
+[data-testid="stSidebar"] [data-testid="stAlert"] {
+    background: #edf9f2 !important;
+    border: 1px solid #cdebd9 !important;
+    color: #1f7a52 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stAlert"] p {
+    color: #1f7a52 !important;
+}
+
+/* =========================================================
+   FILE UPLOADER
+   ========================================================= */
+
+[data-testid="stFileUploader"] {
+    background: #ffffff !important;
+    border: 1px dashed #aeb6c2 !important;
+    border-radius: 10px !important;
+    padding: 6px !important;
+}
+
+[data-testid="stFileUploader"]:hover {
+    border-color: var(--purple) !important;
+}
+
+/* Remove dark inner uploader background */
+[data-testid="stFileUploader"] section,
+[data-testid="stFileUploaderDropzone"] {
+    background: #ffffff !important;
+    border: none !important;
+}
+
+/* Uploader text */
+[data-testid="stFileUploader"] small,
+[data-testid="stFileUploader"] span {
+    color: var(--muted) !important;
+}
+
+[data-testid="stFileUploader"] button {
+    color: var(--purple) !important;
+    border-color: #d8daf7 !important;
+    background: #f8f8ff !important;
+}
+
+/* Uploaded file chip */
+[data-testid="stFileUploaderFile"] {
+    background: #f7f8fa !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+}
+
+/* =========================================================
+   TOP BAR
+   ========================================================= */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+.brand-title {
+    color: var(--text) !important;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+}
+
+.brand-subtitle {
+    font-size: 0.88rem;
+    margin-top: 3px;
+}
+
+.header-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 12px;
+    border-radius: 999px;
+
+    background: var(--purple-soft);
+    color: var(--purple) !important;
+    border: 1px solid #ddddf8;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    padding: 32px 28px;
+    margin: 18px 0 26px;
+
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.hero-label {
+    color: var(--purple) !important;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   SECTION TITLE
+   ========================================================= */
+
+.section-title {
+    margin-top: 26px;
+    margin-bottom: 14px;
+
+    color: var(--text) !important;
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.feature-card,
+.metric-card,
+.circle-card,
+.summary-card,
+.detail-card,
+.action-card,
+[data-testid="stMetric"] {
+    background: #ffffff !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow) !important;
+}
+
+.feature-card {
+    min-height: 155px;
+    padding: 20px;
+    border-radius: 14px;
+}
+
+.feature-card:hover {
+    border-color: #d2d4f2 !important;
+    box-shadow: var(--shadow-hover) !important;
+}
+
+.card-number {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+
+    border-radius: 9px;
+    background: var(--purple-soft);
+    color: var(--purple) !important;
+
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.card-title {
+    color: var(--text) !important;
+    font-size: 1.02rem;
+    font-weight: 750;
+    margin-bottom: 6px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+/* =========================================================
+   ANALYSIS HEADER
+   ========================================================= */
+
+.analysis-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+
+.ready-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 11px;
+    border-radius: 999px;
+
+    background: #eefaf4;
+    color: var(--green) !important;
+    border: 1px solid #cdeedd;
+
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   METRICS
+   ========================================================= */
+
+.metric-card {
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.metric-label,
+[data-testid="stMetricLabel"] {
+    color: var(--muted) !important;
+    font-size: 0.74rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.metric-value,
+[data-testid="stMetricValue"] {
+    color: var(--text) !important;
+    font-weight: 800;
+}
+
+/* =========================================================
+   CIRCLE CARDS
+   ========================================================= */
+
+.circle-card {
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 16px;
+}
+
+.circle-value {
+    color: var(--purple) !important;
+    font-size: 2.1rem;
+    font-weight: 800;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.summary-card {
+    margin-top: 12px;
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.summary-value {
+    color: var(--text) !important;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.summary-label,
+.summary-desc {
+    color: var(--muted) !important;
+}
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+.panel-title {
+    color: var(--text) !important;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.skill-row {
+    margin-bottom: 12px;
+    padding: 13px 14px;
+    border-radius: 12px;
+
+    background: #ffffff !important;
+    border: 1px solid var(--border) !important;
+}
+
+.skill-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.skill-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.77rem;
+    margin-bottom: 7px;
+}
+
+.status {
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.status.good {
+    color: var(--green) !important;
+}
+
+.status.below {
+    color: var(--orange) !important;
+}
+
+.status.critical {
+    color: var(--red) !important;
+}
+
+.track {
+    height: 7px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #edf0f4;
+}
+
+.current {
+    height: 100%;
+    border-radius: inherit;
+    background: var(--purple);
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.stButton > button,
+.stDownloadButton > button {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    min-height: 42px;
+
+    border-radius: 9px !important;
+    border: 1px solid var(--purple) !important;
+
+    background: var(--purple) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+
+    font-weight: 700 !important;
+
+    box-shadow: 0 3px 10px rgba(91, 91, 214, 0.16);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    background: var(--purple-hover) !important;
+    border-color: var(--purple-hover) !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(91, 91, 214, 0.22);
+}
+
+/* Smooth shine animation */
+.stButton > button::after,
+.stDownloadButton > button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -90px;
+
+    width: 55px;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.22);
+    transform: skewX(-20deg);
+
+    animation: button-shine 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes button-shine {
+    0% {
+        left: -90px;
+    }
+    45% {
+        left: 115%;
+    }
+    100% {
+        left: 115%;
+    }
+}
+
+/* Primary button gets a soft pulse */
+.stButton > button[kind="primary"] {
+    animation: button-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes button-pulse {
+    0%, 100% {
+        box-shadow: 0 3px 10px rgba(91, 91, 214, 0.16);
+    }
+    50% {
+        box-shadow: 0 5px 17px rgba(91, 91, 214, 0.28);
+    }
+}
+
+/* =========================================================
+   SELECTBOX
+   ========================================================= */
+
+[data-baseweb="select"] > div {
+    min-height: 42px !important;
+
+    background: #ffffff !important;
+    border: 1px solid var(--border-strong) !important;
+    border-radius: 9px !important;
+
+    color: var(--text) !important;
+}
+
+[data-baseweb="select"] input {
+    color: var(--text) !important;
+}
+
+[data-baseweb="select"] svg {
+    color: #344054 !important;
+}
+
+/* Dropdown menu */
+[data-baseweb="popover"] {
+    background: #ffffff !important;
+}
+
+[role="listbox"] {
+    background: #ffffff !important;
+}
+
+[role="option"] {
+    color: var(--text) !important;
+    background: #ffffff !important;
+}
+
+[role="option"]:hover {
+    background: #f5f5ff !important;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+input,
+textarea {
+    background: #ffffff !important;
+    color: var(--text) !important;
+
+    border: 1px solid var(--border-strong) !important;
+    border-radius: 9px !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #98a2b3 !important;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--purple) !important;
+    box-shadow: 0 0 0 1px rgba(91, 91, 214, 0.12) !important;
+}
+
+/* =========================================================
+   TABS
+   ========================================================= */
+
+button[data-baseweb="tab"] {
+    color: var(--muted) !important;
+    font-weight: 650;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: var(--purple) !important;
+}
+
+div[data-baseweb="tab-highlight"] {
+    background-color: var(--purple) !important;
+}
+
+/* =========================================================
+   EXPANDER / ALERTS / DATAFRAME
+   ========================================================= */
+
+[data-testid="stExpander"] {
+    background: #ffffff !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px;
+}
+
+[data-testid="stAlert"] {
+    border-radius: 10px !important;
+}
+
+[data-testid="stDataFrame"] {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+
+/* =========================================================
+   FOOTER / SCROLLBAR
+   ========================================================= */
+
+footer {
+    visibility: hidden;
+}
+
+.footer {
+    margin-top: 36px;
+    padding: 18px 0 6px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f6f8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c9cdd5;
+    border-radius: 999px;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .topbar,
+    .analysis-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .main .block-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .hero {
+        border-radius: 14px;
+    }
+}
